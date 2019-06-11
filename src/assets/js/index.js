@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './index.scss';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './routes/home';
+import NotFound from './routes/not-found';
 
-class App extends React.Component {
-  render () {
-    return (
-      <h1 className="red">Django + React</h1>
-    )
-  }
-}
 
-ReactDOM.render(<App />, document.getElementById('react-app'));
+ReactDOM.render(
+  <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="*" exact component={NotFound} />
+      </Switch>
+  </ BrowserRouter>,
+  document.getElementById('react-app'));
