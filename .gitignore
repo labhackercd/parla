@@ -165,3 +165,6 @@ typings/
 
 # dotenv environment variables file
 .env
+*.ini
+
+webpack-stats.json
