@@ -163,8 +163,14 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Yarn file
+yarn.lock
+
 # dotenv environment variables file
 .env
 *.ini
+
+# VSCode stuff:
+.vscode/
 
 webpack-stats.json
